@@ -1,0 +1,34 @@
+:root {
+    --primary-color: #3B97EB;
+    --primary-color-dark: #00539E;
+    --primary-color-light: #59B1FF;
+    --secondary-color-light: #FEEBCD;
+}
+
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+.auth-section {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-box {}
+
+.button {
+    background-color: var(--primary-color);
+    border: var(--primary-color-dark) .1rem solid;
+    color: var(--secondary-color-light);
+    padding: .5rem 2rem;
+    border-radius: .2em;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 2px;
+    cursor: pointer;
+    user-select: none;
+}
