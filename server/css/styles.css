@@ -40,13 +40,21 @@ body {
     background: rgb(59, 151, 235);
     background: linear-gradient(189deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 100%);
     border-radius: .5rem;
-    height: 25rem;
-    width: 23rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    text-align: c;
+    text-align: center;
+}
+
+.login-auth-box {
+    height: 25rem;
+    width: 23rem;
+}
+
+.register-auth-box {
+    height: 30rem;
+    width: 23rem;
 }
 
 .logo-image {
@@ -97,12 +105,12 @@ body {
     margin: 0rem;
 }
 
-.login-prompt {
+.auth-main-prompt {
     font-size: 1.35rem;
     color: var(--secondary-color-light);
 }
 
-.register-prompt {
+.auth-secondary-prompt {
     font-size: .9rem;
     color: var(--secondary-color-light);
 }

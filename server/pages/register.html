@@ -15,16 +15,18 @@
 
 <body>
     <div class="auth-section">
-        <div class="auth-box login-auth-box">
+        <div class="auth-box register-auth-box">
             <a href="/" class="logo"><img src="/images/logo3.png" class="logo-image" alt="Logo"></a>
-            <p class="auth-main-prompt">Log in to your Surveil account</p>
-            <p class="auth-secondary-prompt">Don't have an account? <a href="register.html" class="auth-link">Sign up</a></p>
-            <form id="login-form" class="auth-form">
+            <p class="auth-main-prompt">Sign up for a Surveil account</p>
+            <p class="auth-secondary-prompt">Alerady have an account? <a href="login.html" class="auth-link">Log in</a></p>
+            <form id="register-form" class="auth-form">
+                <input type="text" id="name" name="name" class="form-input" placeholder="Name" autocomplete="off">
+                <br>
                 <input type="text" id="email" name="email" class="form-input" placeholder="Email" autocomplete="off">
                 <br>
                 <input type="password" id="password" name="password" class="form-input" placeholder="Password" autocomplete="off">
                 <p><a href="forgot_password.html" class="auth-link forgot-password-prompt">Forgot Password?</a></p>
-                <input type="submit" value="Log in" id="login-button" class="button">
+                <input type="submit" value="Sign up" id="register-button" class="button">
             </form>
         </div>
     </div>
