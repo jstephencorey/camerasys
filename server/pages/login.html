@@ -7,21 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Titillium+Web:wght@200;400&display=swap" rel="stylesheet">
     <title>Login Page</title>
 </head>
 
 <body>
     <div class="auth-section">
         <div class="auth-box">
-            <a href="/" class="logo"><img src="/images/logo1.png" alt="Logo"></a>
+            <a href="/" class="logo"><img src="/images/logo3.png" class="logo-image" alt="Logo"></a>
+            <p class="login-prompt">Log in to your Surveil account</p>
+            <p class="register-prompt">Don't have an account? <a href="register.html" class="auth-link">Sign up</a></p>
             <form id="login-form" class="auth-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter user name here" autocomplete="off">
+                <input type="text" id="username" name="username" class="form-input" placeholder="Username" autocomplete="off">
                 <br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter password here" autocomplete="off">
-                <br>
-                <input type="submit" value="Login" id="login-button" class="button">
+                <input type="password" id="password" name="password" class="form-input" placeholder="Password" autocomplete="off">
+                <p><a href="forgot_password.html" class="auth-link forgot-password-prompt">Forgot Password?</a></p>
+                <input type="submit" value="Log in" id="login-button" class="button">
             </form>
         </div>
     </div>
