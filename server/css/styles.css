@@ -1,10 +1,14 @@
 :root {
     --primary-color: #2f86d8;
     --primary-color-dark: #014c8d;
-    --primary-color-light: #78befc;
+    --primary-color-light: #a9cef0;
     --primary-color-very-dark: #020024;
     --secondary-color-dark: #c97c00;
     --secondary-color-light: #ebd4af;
+    /* --secondary-color-dark: #7c2b00;
+    --secondary-color-light: #fae4d9; */
+    --project-white: #f5f5f5;
+    --gradient-background: linear-gradient(330deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 66%, var(--primary-color) 100%);
 }
 
 * {
@@ -18,8 +22,11 @@ html,
 body {
     margin: 0px;
     height: 100%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(70deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 66%, var(--primary-color) 100%);
+    background-image: var(--gradient-background);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .auth-section {
@@ -113,10 +120,117 @@ body {
     font-size: .7rem;
 }
 
+.navbar-brand .logo-image {
+    width: 5rem;
+    height: 2.5rem;
+}
+
+.register-menu-button {
+    background: var(--primary-color-dark);
+    color: var(--secondary-color-light);
+}
+
+.register-menu-button:hover {
+    background: var(--primary-color-very-dark);
+}
+
+.login-menu-button {
+    background: var(--primary-color-light);
+    color: var(--primary-color-very-dark);
+    border: var(--primary-color-dark) .1rem solid;
+}
+
+.login-menu-button:hover {
+    background: var(--primary-color);
+}
+
+.btn {
+    box-shadow: .05rem .05rem .5rem .01rem rgba(0, 0, 0, .2);
+}
+
+.front-page-splash {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3rem;
+    color: var(--primary-color-light);
+}
+
+.front-page-splash h2 {
+    margin-bottom: 1rem;
+}
+
+.front-page-splash h1 {
+    font-size: 16vw;
+    width: 100%;
+    height: 100%;
+    font-family: 'Ubuntu Mono', monospace;
+    color: var(--primary-color-light);
+    /* Set the background color */
+    background: linear-gradient(to left, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 100%);
+    /* Mask the color to the text, and remove the rest  */
+    -webkit-background-clip: text;
+    /* Make the text fill color value transparent so the masked background color comes through */
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    /* text-shadow: 2px 1px 1px var(--primary-color-very-dark); */
+}
+
+.content-section {
+    color: var(--project-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.content-image {
+    width: 100vw;
+    height: 20rem;
+    opacity: .8;
+}
+
+.content-text {
+    padding: .5rem;
+    font-size: 1.1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-color);
+    color: var(--primary-color-very-dark);
+    justify-content: space-around;
+    align-items: center;
+    padding-top: .5rem;
+}
+
+.link {
+    color: var(--primary-color-very-dark);
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: var(--primary-color-dark);
+}
+
 @media only screen and (max-width: 500px) {
     * {
         font-size: .9rem;
     }
 }
 
-@media only screen and (min-width: 500px) {}
+@media only screen and (min-width: 700px) {
+    .content-section {
+        flex-direction: row;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .content-image {
+        width: 50vw;
+    }
+}

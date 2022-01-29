@@ -5,13 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Titillium+Web:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Home page</title>
 </head>
 
 <body>
-    <h1>Camera site</h1>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="/"><img src="/images/logo3.png" class="logo-image" alt="Logo"></a>
+            <div>
+                <a href="/pages/login.html"><button class="btn login-menu-button" type="Login">Log in</button></a>
+                <a href="/pages/register.html"><button class="btn register-menu-button" type="Register">Sign up</button></a>
+            </div>
+        </div>
+    </nav>
+    <div class="background"></div>
+    <div class="front-page-splash">
+        <h1 class="main-header">Surveil</h1>
+        <h2>DIY Home security and surveillance</h2>
+        <a href="/pages/register.html"><button class="btn register-menu-button" type="Register">Start today</button></a>
+    </div>
+    <div class="content-section">
+        <img src="/images/girl-computer.jpg" alt="Girl at computer" class="content-image">
+        <div class="content">
+            <h3>What are we?</h3>
+            <p class="content-text">We are a place for you to connect your homemade security systems so you can collect and view all your data, pictures, and videos into one central place.</p>
+        </div>
+    </div>
+    <div class="content-section">
+        <img src="/images/tech-eye.jpg" alt="Tech looking eye" class="content-image">
+        <div class="content">
+            <h3>Our vision</h3>
+            <p class="content-text">Our vision is to make a user-friendly, powerful, one-stop hub for all your connected DIY home security needs</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Author: Joseph Corey</p>
+        <p><a href="mailto:jstephencorey@gmail.com" class="link">jstephencorey@gmail.com</a></p>
+        <p><a href="https://github.com/jstephencorey/camerasys" class="link">Github link</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
