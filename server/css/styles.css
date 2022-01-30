@@ -213,10 +213,16 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding-top: .5rem;
-    position: fixed;
+    position: relative;
+    /* 
+    position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
+}
+
+.hidden-footer {
+    display: none;
 }
 
 .link {
