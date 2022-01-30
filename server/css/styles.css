@@ -16,6 +16,7 @@
     font-size: 13pt;
     margin: 0rem;
     padding: 0rem;
+    box-sizing: border-box;
 }
 
 html,
@@ -177,6 +178,7 @@ body {
     background: linear-gradient(to left, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 100%);
     /* Mask the color to the text, and remove the rest  */
     -webkit-background-clip: text;
+    background-clip: text;
     /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -211,6 +213,10 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding-top: .5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .link {
@@ -220,6 +226,175 @@ footer {
 
 .link:hover {
     color: var(--primary-color-dark);
+}
+
+.nav {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: fixed;
+    width: 8rem;
+}
+
+.nav>.nav-header {
+    display: inline;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-logo-image {
+    padding: .4rem;
+    width: 8rem;
+    height: 4rem;
+}
+
+.nav>.nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.nav>.nav-links {
+    display: inline;
+    font-size: 18px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    width: 100%;
+    color: var(--primary-color-very-dark);
+}
+
+.nav>.nav-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+.page-title {
+    position: absolute;
+    left: 8rem;
+    padding: 0rem 2rem;
+    font-size: 3.7rem;
+    color: var(--primary-color-light);
+    /* Set the background color */
+    background: linear-gradient(275deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 100%);
+    /* Mask the color to the text, and remove the rest  */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Make the text fill color value transparent so the masked background color comes through */
+    -webkit-text-fill-color: transparent;
+}
+
+.photo-section {
+    padding: 2rem;
+    /* If full screen */
+    position: absolute;
+    left: 8rem;
+    top: 5rem;
+    column-count: 1;
+    column-gap: 1em;
+}
+
+@media (min-width:1150px) {
+    .photo-section {
+        column-count: 5;
+    }
+}
+
+@media (min-width:950px) and (max-width:1150px) {
+    .photo-section {
+        column-count: 4;
+    }
+}
+
+@media (min-width:750px) and (max-width:950px) {
+    .photo-section {
+        column-count: 3;
+    }
+}
+
+@media (min-width:600px) and (max-width:750px) {
+    .photo-section {
+        column-count: 2;
+    }
+}
+
+@media (max-width:600px) {
+    .photo-section {
+        column-count: 2;
+        /* If small screen */
+        position: relative;
+        left: 0rem;
+        top: 0rem;
+    }
+}
+
+.display-photo {
+    height: 10rem;
+    width: 10rem;
+}
+
+@media (min-width:600px) {
+    .nav>.nav-btn {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .page-title {
+        position: relative;
+        left: 0;
+        text-align: center;
+    }
+    .nav {
+        --nav-height: 3.8rem;
+        position: relative;
+        width: 100vw;
+        height: var(--nav-height);
+    }
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: var(--nav-height);
+        height: var(--nav-height);
+        padding: .8rem;
+    }
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 2.5rem;
+        height: .9rem;
+        border-top: .2rem solid var(--primary-color-very-dark);
+    }
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        text-align: center;
+        width: 100%;
+        background-color: var(--primary-color);
+        height: 0px;
+        transition: all 0.35s ease-in;
+        overflow-y: hidden;
+        top: var(--nav-height);
+        left: 0px;
+    }
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        font-size: 1.8rem;
+    }
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 5px);
+        overflow-y: auto;
+    }
 }
 
 @media only screen and (max-width: 500px) {
