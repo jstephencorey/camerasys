@@ -58,15 +58,20 @@ body {
     width: 23rem;
 }
 
+.logo-image-main {
+    width: 8rem;
+    height: 4em;
+}
+
 .logo-image {
     width: 8rem;
-    height: 4rem;
+    height: 4em;
 }
 
 .logo {
     display: flex;
     justify-content: center;
-    margin: .5rem;
+    margin: 0rem;
 }
 
 .button {
