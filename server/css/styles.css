@@ -278,7 +278,7 @@ footer {
     text-decoration: none;
     font-size: 1rem;
     width: 100%;
-    color: var(--primary-color-very-dark);
+    color: var(--primary-color-light);
     /* border-bottom: var(--primary-color-very-dark) .1rem solid; */
 }
 
@@ -308,20 +308,25 @@ footer {
     padding: 0rem 2rem;
     font-size: 3.7rem;
     color: var(--primary-color-light);
-    /* Set the background color */
     background: linear-gradient(275deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 100%);
-    /* Mask the color to the text, and remove the rest  */
     -webkit-background-clip: text;
     background-clip: text;
-    /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
 }
 
 .photo-section {
     padding: 2rem;
-    /* If full screen */
-    column-count: 1;
-    column-gap: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.device-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
 }
 
 .user-area-section {
@@ -330,61 +335,55 @@ footer {
     top: 5rem;
 }
 
-.device-section {
-    columns: 3;
-}
-
-.device-box {
-    border: var(--primary-color-very-dark) 3px solid;
-    padding: 0 1rem;
-}
-
-.device-box .device-title {
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.device-box .device-image {
-    width: 15rem;
-}
-
-@media (min-width:1150px) {
-    .photo-section {
-        column-count: 5;
-    }
-}
-
-@media (min-width:950px) and (max-width:1150px) {
-    .photo-section {
-        column-count: 4;
-    }
-}
-
-@media (min-width:750px) and (max-width:950px) {
-    .photo-section {
-        column-count: 3;
-    }
-}
-
-@media (min-width:600px) and (max-width:750px) {
-    .photo-section {
-        column-count: 2;
-    }
-}
-
 @media (max-width:600px) {
-    .photo-section {
-        column-count: 2;
-        /* If small screen */
+    .user-area-section {
         position: relative;
         left: 0rem;
         top: 0rem;
+        justify-content: center;
     }
 }
 
 .display-photo {
     height: 10rem;
     width: 10rem;
+    margin: .5rem;
+}
+
+.device-box {
+    margin: .7rem;
+    display: inline-block;
+    border: var(--primary-color-very-dark) 3px solid;
+    padding: 0 1rem;
+    border-radius: .5rem;
+    height: 23rem;
+    width: 20rem;
+    background-color: var(--primary-color-dark);
+    background: linear-gradient(100deg, var(--primary-color-dark) 0%, var(--primary-color) 50%);
+}
+
+.device-box:hover {
+    background-color: rgba(0, 0, 0, .7);
+    background: none;
+}
+
+.device-box-link {
+    text-decoration: none;
+}
+
+.device-box .ip-addr {
+    color: var(--primary-color-light);
+}
+
+.device-box .device-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-color-light);
+}
+
+.device-box .device-image {
+    width: 15rem;
+    margin: auto;
 }
 
 @media (min-width:600px) {
@@ -455,7 +454,7 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
-    * {
+    .auth-page {
         font-size: .9rem;
     }
 }
