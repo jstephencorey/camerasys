@@ -28,6 +28,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    display: block;
 }
 
 .auth-section {
@@ -210,6 +211,11 @@ body {
     font-size: 1.1rem;
 }
 
+.page-container {
+    position: relative;
+    min-height: 100%;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -223,7 +229,8 @@ footer {
     /* 
     position: absolute;
     bottom: 0;
-    left: 0; */
+    left: 0;
+    */
     width: 100%;
 }
 
@@ -339,6 +346,7 @@ footer {
     position: absolute;
     left: 8rem;
     top: 5rem;
+    min-height: calc(100vh - 5rem);
 }
 
 @media (max-width:600px) {
