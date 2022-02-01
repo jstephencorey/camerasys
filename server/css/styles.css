@@ -141,7 +141,7 @@ body {
 
 .register-menu-button {
     background: var(--primary-color-dark);
-    color: var(--secondary-color-light);
+    color: var(--project-white);
 }
 
 .register-menu-button:hover {
@@ -213,7 +213,8 @@ body {
 footer {
     display: flex;
     flex-direction: column;
-    background: var(--primary-color);
+    background-color: var(--primary-color);
+    background: linear-gradient(90deg, var(--primary-color-dark) 0%, var(--primary-color) 40%, var(--primary-color) 60%, var(--primary-color-dark) 100%);
     color: var(--primary-color-very-dark);
     justify-content: space-around;
     align-items: center;
@@ -237,6 +238,11 @@ footer {
 
 .link:hover {
     color: var(--primary-color-dark);
+}
+
+.navbar-light {
+    background-color: var(--primary-color-dark);
+    background: var(--gradient-background);
 }
 
 .nav {
