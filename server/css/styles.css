@@ -352,7 +352,9 @@ footer {
 
 .device-box {
     margin: .7rem;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     border: var(--primary-color-very-dark) 3px solid;
     padding: 0 1rem;
     border-radius: .5rem;
@@ -371,12 +373,16 @@ footer {
     text-decoration: none;
 }
 
-.device-box .ip-addr {
+.device-box .ip-addr,
+.device-box .ip-addr>* {
     color: var(--primary-color-light);
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
 }
 
 .device-box .device-title {
     text-align: center;
+    margin: .1rem;
     font-size: 1.5rem;
     color: var(--primary-color-light);
 }
