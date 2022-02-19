@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/jstephencorey/camerasys#readme",
     "dependencies": {
-        "express": "^4.17.2"
+        "express": "^4.17.3",
+        "express-openid-connect": "^2.7.0"
     }
 }
