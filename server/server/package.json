@@ -1,0 +1,25 @@
+{
+    "name": "cameraserver",
+    "version": "1.0.0",
+    "description": "server backend",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jstephencorey/camerasys.git"
+    },
+    "keywords": [
+        "server"
+    ],
+    "author": "Joseph Corey",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jstephencorey/camerasys/issues"
+    },
+    "homepage": "https://github.com/jstephencorey/camerasys#readme",
+    "dependencies": {
+        "express": "^4.17.2"
+    }
+}
