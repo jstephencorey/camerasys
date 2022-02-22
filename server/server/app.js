@@ -41,6 +41,10 @@ app.get("/chocolate", function(req, res) {
     res.send("Mm chocolate :O");
 });
 
+
+app.get("/more_chocolate", function(req, res) {
+    res.send("Mm, more chocolate :O");
+});
 // app.listen(port, () => {
 //     console.log(`Example app listening on port ${port}`)
 // })
