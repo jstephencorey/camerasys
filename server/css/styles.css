@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --primary-color: #2f86d8;
     --primary-color-dark: #014c8d;
     --primary-color-light: #a9cef0;
@@ -6,7 +6,7 @@
     --secondary-color-dark: #c97c00;
     --secondary-color-light: #ebd4af;
     /* --secondary-color-dark: #7c2b00;
-    --secondary-color-light: #fae4d9; */
+    --secondary-color-light: #fae4d9; 
     --project-white: #f5f5f5;
     --gradient-background: linear-gradient(330deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 66%, var(--primary-color) 100%);
 }
@@ -29,7 +29,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     display: block;
-}
+} */
 
 .auth-section {
     display: flex;
@@ -59,7 +59,7 @@ body {
     width: 23rem;
 }
 
-.logo-image-main {
+/* .logo-image-main {
     width: 8rem;
     height: 4em;
 }
@@ -67,13 +67,13 @@ body {
 .logo-image {
     width: 8rem;
     height: 4em;
-}
+} */
 
-.logo {
+/* .logo {
     display: flex;
     justify-content: center;
     margin: 0rem;
-}
+} */
 
 .button {
     background-color: var(--primary-color-light);
@@ -135,10 +135,10 @@ body {
     font-size: .7rem;
 }
 
-.navbar-brand .logo-image {
+/* .navbar-brand .logo-image {
     width: 5rem;
     height: 2.5rem;
-}
+} */
 
 .register-menu-button {
     background: var(--primary-color-dark);
@@ -216,7 +216,7 @@ body {
     min-height: 100%;
 }
 
-footer {
+/* footer {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
@@ -236,7 +236,7 @@ footer {
 
 .hidden-footer {
     display: none;
-}
+} */
 
 .link {
     color: var(--primary-color-very-dark);
@@ -246,12 +246,12 @@ footer {
 .link:hover {
     color: var(--primary-color-dark);
 }
-
+/* 
 .navbar-light {
     background-color: var(--primary-color-dark);
     background: var(--gradient-background);
     box-shadow: .3rem .3rem 1rem .1rem rgba(0, 0, 0, .3);
-}
+} */
 
 .nav {
     height: 100vh;

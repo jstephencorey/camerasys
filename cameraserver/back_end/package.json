@@ -1,0 +1,28 @@
+{
+  "name": "back_end",
+  "version": "1.0.0",
+  "description": "backend for Joseph Corey's camera surver",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstephencorey/camerasys.git"
+  },
+  "author": "Joseph Corey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jstephencorey/camerasys/issues"
+  },
+  "homepage": "https://github.com/jstephencorey/camerasys#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.2.10",
+    "multer": "^1.4.4",
+    "path": "^0.12.7"
+  }
+}

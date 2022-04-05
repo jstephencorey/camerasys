@@ -40,57 +40,7 @@
         </div>
     </div>
     <h1 class="page-title">Footage</h1>
-    <section class="photo-section user-area-section">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-        <img src="/images/blank-profile.webp" alt="Dummy picture" class="display-photo">
-    </section>
+    <section class="photo-section user-area-section", id='photo-section'></section>
     <!-- todo change this -->
     <footer class="hidden-footer">
         <p>Author: Joseph Corey</p>
@@ -98,6 +48,19 @@
         <p><a href="https://github.com/jstephencorey/camerasys" class="link">Github link</a></p>
     </footer>
 </body>
+
+<script>
+const photos = document.getElementById('photo-section')
+photos.innerHTML = '';
+for (let i = 0; i < 56; i++){
+    const image = document.createElement('img');
+    image.src  = '/images/blank-profile.webp';
+    image.alt = 'Dummy pic';
+    image.className = 'display-photo';
+    photos.appendChild(image);
+}
+// photos.innerHTML = 'words'
+</script>
 
 
 </html>
