@@ -15,9 +15,7 @@ const mongoose = require("mongoose");
 // const userName = process.env.MONGOUSER;
 // const password = process.env.MONGOPASSWORD;
 // const hostname = process.env.MONGOHOSTNAME;
-const userName = "josephcorey";
-const password = "WhoisJohnGalt%3F";
-const hostname = "jccluster.zjg3h.mongodb.net";
+
 const dbName = "surveil";
 
 const url = `mongodb+srv://${userName}:${password}@${hostname}/${dbName}`;
