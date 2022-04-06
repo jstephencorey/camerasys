@@ -1,18 +1,24 @@
 <template>
-  <div class="photo-display">
-    <section class="image-gallery">
-      <div class="image" v-for="photo in photos" :key="photo.id">
-        <h2>{{photo.title}}</h2>
-        <img :src="photo.path" />
-        <p>{{photo.description}}</p>
+  <div class="photo-page">
+    <side-menu/>
+    <h1 class="page-title">Footage</h1>
+    <section class="photo-section user-area-section" id='photo-section'>
+      <div class="photo-display" v-for="photo in photos" :key="photo.id">
+        <h2 class="camera-label">{{photo.camera}}</h2>
+        <img :src="photo.path" class="image"/>
+        <p class="timestamp">{{getDateTime(photo.timestamp)}}</p>
       </div>
     </section>
   </div>
 </template>
 
+
+
 <script>
 import axios from "axios";
+import SideMenu from '../components/SideMenu.vue';
 export default {
+  components: { SideMenu },
   name: "PhotoDisplay",
   data() {
     return {
@@ -32,6 +38,19 @@ export default {
         console.log(error);
       }
     },
+    getDateTime(timestamp){
+      // return `${timestamp}, hello`;
+      // let ts = new Date(timestamp);
+      // return ts.toTimeString();
+      // const current_timestamp = new Date().getTime() 
+      // console.log(current_timestamp);
+      
+      var  date = new Date(parseInt(timestamp));
+      
+      return (date.getDate()+"/"+(date.getMonth()+1)+
+                "/"+date.getFullYear()+" "+date.getHours()+   
+                ":"+date.getMinutes()+":"+date.getSeconds());
+    }
   }
 };
   // data() {
@@ -114,70 +133,61 @@ export default {
 </script>
 
 <style scoped>
-.image h2 {
-  font-style: italic;
-  font-size: 1em;
+
+.photo-page {
+  height: 100%;
 }
 
-.heading {
-  display: flex;
-  margin-bottom: 20px;
-  margin-top: 20px;
+.timestamp {
+  color: white;
 }
 
-.heading h2 {
-  margin-top: 8px;
-  margin-left: 10px;
+.camera-label {
+  color: white;
 }
 
-.add,
-.edit {
-  display: flex;
+.photo-section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
 }
 
-.circle {
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  padding: 8px;
-  background: #333;
-  color: #fff;
-  text-align: center;
+.user-area-section {
+    /* position: absolute;
+    left: 8rem;
+    top: 5rem; */
+    min-height: calc(100vh - 5rem);
 }
 
-/* Form */
-input,
-textarea,
-select,
-button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+@media (max-width:600px) {
+    .user-area-section {
+        position: relative;
+        left: 0rem;
+        top: 0rem;
+        justify-content: center;
+    }
 }
 
-.form {
-  margin-right: 50px;
+.photo-display {
+    margin: .5rem;
 }
 
-/* Uploaded images */
-.upload h2 {
-  margin: 0px;
+.image {
+    height: 10rem;
+    width: 10rem;
 }
 
-.upload img {
-  max-width: 300px;
-}
-/* Suggestions */
-.suggestions {
-  width: 200px;
-  border: 1px solid #ccc;
-}
-
-.suggestion {
-  min-height: 20px;
-}
-
-.suggestion:hover {
-  background-color: #5bdeff;
-  color: #fff;
+.page-title {
+    /* position: absolute; */
+    left: 8rem;
+    padding: 0rem 2rem;
+    font-size: 3.7rem;
+    color: var(--primary-color-light);
+    background: linear-gradient(275deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 </style>

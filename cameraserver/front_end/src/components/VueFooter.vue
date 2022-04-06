@@ -35,6 +35,9 @@
   align-items: center;
   padding-top: 0.5rem;
   position: relative;
+  /* position: absolute; */
+  /* bottom: 0;
+  left: 0; */
 
   width: 100%;
 }

@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-    <horiz-header></horiz-header>
     <div class="content">
       <router-view />
-      <router-link to='/admin'>ADMIN STUFF</router-link>
     </div>
     <vue-footer></vue-footer>
   </div>
 </template>
 
 <script>
-import VueFooter from './components/VueFooter';
+import VueFooter from './components/VueFooter.vue';
 
 export default ({
   name:'App',
@@ -55,4 +53,12 @@ body {
     display: block;
 }
 
+.link {
+    color: var(--primary-color-very-dark);
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: var(--primary-color-dark);
+}
 </style>
