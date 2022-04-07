@@ -3,7 +3,9 @@ import VueRouter from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 import PhotoDisplay from '../views/PhotoDisplay.vue'
 import NotFound from '../views/NotFound.vue'
-import Profile from '../views/Profile.vue'
+import ProfilePage from '../views/ProfilePage.vue'
+import DevicePage from '../views/DevicePage.vue'
+import {authenticationGuard} from '../auth/authentication-gaurd.js';
 
 Vue.use(VueRouter)
 
@@ -15,17 +17,25 @@ const routes = [{
   {
     path: '/photos',
     name: 'photos',
-    component: PhotoDisplay
-  },
-  {
-    path: '/notFound',
-    name: 'notFound',
-    component: NotFound
+    component: PhotoDisplay,
+    beforeEnter: authenticationGuard,
   },
   {
     path: '/profile',
     name: 'profile',
-    component: Profile
+    component: ProfilePage,
+    beforeEnter: authenticationGuard,
+  },
+  {
+    path: '/devices',
+    name: 'devices',
+    component: DevicePage,
+    beforeEnter: authenticationGuard,
+  },
+  {
+    path: '/notFound',
+    name: 'notFound',
+    component: NotFound,
   },
 ]
 

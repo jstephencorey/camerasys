@@ -1,5 +1,8 @@
 <template>
   <div>
+    <side-menu/>
+    <page-title title="Profile"/>
+    <div class="profile-area">
     <div class="profile-header">
       <div class="col-md-2 mb-3">
         <img
@@ -21,13 +24,30 @@
       }}</pre
       >
     </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.profile-area {
+  margin-left: 2rem;
+}
 .profile-picture {
     border-radius: 50%;
     width: 7rem;
     height: 7rem;
 }
 </style>
+
+<script>
+import SideMenu from '@/components/SideMenu.vue'
+import PageTitle from '@/components/PageTitle.vue'
+
+export default({
+  name: "ProfilePage",
+  components: {
+    SideMenu,
+    PageTitle,
+  }
+})
+</script>

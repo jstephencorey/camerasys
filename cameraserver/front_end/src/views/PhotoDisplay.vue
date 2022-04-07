@@ -1,7 +1,7 @@
 <template>
   <div class="photo-page">
     <side-menu/>
-    <h1 class="page-title">Footage</h1>
+    <page-title title="Footage"/>
     <section class="photo-section user-area-section" id='photo-section'>
       <div class="photo-display" v-for="photo in photos" :key="photo.id">
         <h2 class="camera-label">{{photo.camera}}</h2>
@@ -17,8 +17,9 @@
 <script>
 import axios from "axios";
 import SideMenu from '../components/SideMenu.vue';
+import PageTitle from '../components/PageTitle.vue';
 export default {
-  components: { SideMenu },
+  components: { SideMenu, PageTitle },
   name: "PhotoDisplay",
   data() {
     return {
@@ -136,6 +137,7 @@ export default {
 
 .photo-page {
   height: 100%;
+  width: 100vw;
 }
 
 .timestamp {
@@ -161,14 +163,15 @@ export default {
     min-height: calc(100vh - 5rem);
 }
 
-@media (max-width:600px) {
+/* @media (max-width:600px) {
     .user-area-section {
         position: relative;
         left: 0rem;
         top: 0rem;
         justify-content: center;
+        width: 100vw
     }
-}
+} */
 
 .photo-display {
     margin: .5rem;
@@ -179,15 +182,4 @@ export default {
     width: 10rem;
 }
 
-.page-title {
-    /* position: absolute; */
-    left: 8rem;
-    padding: 0rem 2rem;
-    font-size: 3.7rem;
-    color: var(--primary-color-light);
-    background: linear-gradient(275deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 </style>

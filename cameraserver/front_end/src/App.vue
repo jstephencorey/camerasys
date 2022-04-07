@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <title>Surveil</title>
     <div class="content">
       <router-view />
     </div>
