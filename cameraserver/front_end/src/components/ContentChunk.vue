@@ -39,18 +39,18 @@ export default({
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 2rem;
-    margin:2rem;
 }
 
 .content-image {
-    width: 100vw;
+    width: 80vw;
     height: 20rem;
     opacity: .8;
+    margin: 2rem;
 }
 
 .content-title {
     font-size:2rem;
+    margin-left: 3rem;
 }
 
 .content-text {
@@ -75,6 +75,9 @@ export default({
     }
     .content-image {
         width: 50vw;
+    }
+    .content-title {
+        margin-left: 0;
     }
 }
 </style>

@@ -21,6 +21,7 @@ export default({
   left: 20%;
   display: flex;
   justify-content: left;
+  width: 0%;
 }
 
 

@@ -20,7 +20,7 @@
  export const useAuth0 = ({
    onRedirectCallback = () =>
      window.history.replaceState({}, document.title, window.location.pathname),
-   redirectUri = window.location.origin,
+   redirectUri = window.location.origin+'/profile',
    ...pluginOptions
  }) => {
    if (instance) return instance;

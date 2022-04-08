@@ -14,8 +14,8 @@ export default({
         VueButton
     },
     methods: {
-      login() {
-        this.$auth.loginWithRedirect();
+      async login() {
+        await this.$auth.loginWithRedirect();
       },
     },
 })

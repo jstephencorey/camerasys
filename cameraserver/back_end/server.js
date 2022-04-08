@@ -10,13 +10,13 @@ app.use(
 );
 
 const mongoose = require("mongoose");
+const port = 5000; // if you change this, you need to change the frontend code, plus the NGINX config. Dont' change unless needed!
 
 // Fix this later, not a priority rn
 // const userName = process.env.MONGOUSER;
 // const password = process.env.MONGOPASSWORD;
 // const hostname = process.env.MONGOHOSTNAME;
 
-const dbName = "surveil";
 
 const url = `mongodb+srv://${userName}:${password}@${hostname}/${dbName}`;
 
@@ -50,6 +50,14 @@ const testSchema = new mongoose.Schema({
 
 const Test = mongoose.model("Test", testSchema);
 
+const deviceSchema = new mongoose.Schema({
+  deviceName: String,
+  description: String,
+  user: String,
+});
+
+const Device = mongoose.model("Device", deviceSchema);
+
 // Upload a photo. Uses the multer middleware for the upload and then returns
 // the path where the photo is stored in the file system.
 app.post("/api/test", async (req, res) => {
@@ -79,11 +87,12 @@ app.post('/api/photos', upload.single('photo'), async (req, res) => {
         const d = new Date();
         timestamp=d.getTime();
     }
+    // Note - need to enforce that all these things exist
     const photoItem = new Photo({
         timestamp:timestamp,
         path: "/images/" + req.file.filename,
-        user: 'Joseph Corey',
-        camera: 'Fake Camera',
+        user: req.body.user,
+        camera: req.body.cameraname,
     })
     try {
         await photoItem.save();
@@ -96,8 +105,34 @@ app.post('/api/photos', upload.single('photo'), async (req, res) => {
 
 app.get('/api/photos', async (req, res) => {
   try {
-    let photos = await Photo.find();
+    let photos = await Photo.find().where('user').equals(req.query.user);
     res.send(photos);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
+app.post('/api/devices', async (req, res) => {
+  // Note - need to enforce that all these things exist
+  const deviceItem = new Device({
+      deviceName: req.body.deviceName,
+      description: req.body.description,
+      user: req.body.user,
+  })
+  try {
+      await deviceItem.save();
+      res.send(deviceItem);
+  } catch (error) {
+      console.log(error);
+      res.sendStatus(500);
+  }
+});
+
+app.get('/api/devices', async (req, res) => {
+  try {
+    let devices = await Device.find().where('user').equals(req.query.user);
+    res.send(devices);
   } catch (error) {
     console.log(error);
     res.sendStatus(500);
@@ -162,4 +197,4 @@ app.get("/api/version", (req, res) => {
   );
 });
 
-app.listen(5000, () => console.log("Server listening on port 5000!"));
+app.listen(port, () => console.log(`Server listening on port ${port}`));

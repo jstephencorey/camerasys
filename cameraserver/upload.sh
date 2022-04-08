@@ -2,7 +2,7 @@
 echo "Beginning script"
 pushd front_end      
 rm -rf public/images/   
-npm run build  
+# npm run build  
 popd 
 
 printf "%s" $(date +%F-%T) > back_end/version.txt

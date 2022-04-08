@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <title>Surveil</title>
     <div class="content">
       <router-view />
     </div>
@@ -15,6 +14,9 @@ export default ({
   name:'App',
   components:{
     VueFooter,
+  },
+  created(){
+    document.title = "Surveil";
   }
 })
 </script>
@@ -28,8 +30,6 @@ export default ({
     --primary-color-very-dark: #020024;
     --secondary-color-dark: #c97c00;
     --secondary-color-light: #ebd4af;
-    /* --secondary-color-dark: #7c2b00;
-    --secondary-color-light: #fae4d9; */
     --project-white: #f5f5f5;
     --gradient-background: linear-gradient(330deg, var(--primary-color-very-dark) 0%, var(--primary-color-dark) 66%, var(--primary-color) 100%);
 }
