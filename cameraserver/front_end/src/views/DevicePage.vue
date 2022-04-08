@@ -89,7 +89,8 @@ export default {
   methods: {
     async getDevices() {
       try {
-        let response = await axios.get("/api/devices", { params: { user: this.$auth.user.email } });
+        // let response = await axios.get("/api/devices", { params: { user: this.$auth.user.email } });
+        let response = await axios.get("/api/devices", { params: { user: "Hellouser" } });
         this.devices = response.data;
         return true;
       } catch (error) {
@@ -100,7 +101,8 @@ export default {
       await axios.post("/api/devices", {
           deviceName: this.deviceName,
           description: this.description,
-          user: this.$auth.user.email,
+          // user: this.$auth.user.email,
+          user: "this.$auth.user.email",
         });
       this.deviceName = '';
       this.description = '';

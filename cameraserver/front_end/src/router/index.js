@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from '../views/HomePage.vue'
-import PhotoDisplay from '../views/PhotoDisplay.vue'
 import NotFound from '../views/NotFound.vue'
-import ProfilePage from '../views/ProfilePage.vue'
-import DevicePage from '../views/DevicePage.vue'
-import {authenticationGuard} from '../auth/authentication-gaurd.js';
+// import PhotoDisplay from '../views/PhotoDisplay.vue'
+// import ProfilePage from '../views/ProfilePage.vue'
+// import DevicePage from '../views/DevicePage.vue'
+// import {authenticationGuard} from '../auth/authentication-gaurd.js';
 
 Vue.use(VueRouter)
 
@@ -14,24 +14,24 @@ const routes = [{
     name: 'home',
     component: HomePage
   },
-  {
-    path: '/photos',
-    name: 'photos',
-    component: PhotoDisplay,
-    beforeEnter: authenticationGuard,
-  },
-  {
-    path: '/profile',
-    name: 'profile',
-    component: ProfilePage,
-    beforeEnter: authenticationGuard,
-  },
-  {
-    path: '/devices',
-    name: 'devices',
-    component: DevicePage,
-    beforeEnter: authenticationGuard,
-  },
+  // {
+  //   path: '/photos',
+  //   name: 'photos',
+  //   component: PhotoDisplay,
+  //   beforeEnter: authenticationGuard,
+  // },
+  // {
+  //   path: '/profile',
+  //   name: 'profile',
+  //   component: ProfilePage,
+  //   beforeEnter: authenticationGuard,
+  // },
+  // {
+  //   path: '/devices',
+  //   name: 'devices',
+  //   component: DevicePage,
+  //   beforeEnter: authenticationGuard,
+  // },
   {
     path: '/notFound',
     name: 'notFound',

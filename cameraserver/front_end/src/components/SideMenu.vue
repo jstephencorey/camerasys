@@ -18,8 +18,10 @@
     <div class="side-menu contracted-side-menu" id="side-menu">
       <!--profile image & text-->
       <div class="side-menu-profile">
-        <img :src="$auth.user.picture" alt="profile_picture" />
-        <h3>{{ $auth.user.name }}</h3>
+        <!-- <img :src="$auth.user.picture" alt="profile_picture" />
+        <h3>{{ $auth.user.name }}</h3> -->
+        <img :src="'/assets/eye-logo.png'" alt="profile_picture" />
+        <h3>Steve</h3>
         <p>Surveilance Guru</p>
       </div>
       <!--menu item-->
@@ -163,8 +165,8 @@ export default {
   methods: {
     logout() {
       console.log("Logging out");
-      this.$auth.logout();
-      this.$router.push({ path: "/" });
+      // this.$auth.logout();
+      // this.$router.push({ path: "/" });
     },
     menuSpand() {
       let sidemenu = document.getElementById("side-menu");

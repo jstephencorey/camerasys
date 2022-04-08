@@ -15,7 +15,8 @@ export default({
     },
     methods: {
       async login() {
-        await this.$auth.loginWithRedirect();
+        // await this.$auth.loginWithRedirect();
+        alert();
       },
     },
 })

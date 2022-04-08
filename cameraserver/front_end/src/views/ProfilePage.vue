@@ -4,14 +4,17 @@
     <page-title title="Profile" />
     <div class="profile-area">
       <div class="profile-header">
+        <!-- :src="$auth.user.picture" -->
         <img
-          :src="$auth.user.picture"
+          src="/assets/eye-logo.png"
           alt="User's profile picture"
           class="profile-picture"
         />
         <div class="user-info">
-            <h2 class="profile-username">Name: {{ $auth.user.name }}</h2>
-            <p class="profile-email">Email: {{ $auth.user.email }}</p>
+            <!-- <h2 class="profile-username">Name: {{ $auth.user.name }}</h2>
+            <p class="profile-email">Email: {{ $auth.user.email }}</p> -->
+            <h2 class="profile-username">Name:</h2>
+            <p class="profile-email">Email:</p>
         </div>
       </div>
       <p class="welcome-message">

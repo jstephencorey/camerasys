@@ -11,9 +11,10 @@ import VueButton from './VueButton.vue'
     },
     methods: {
       signup() {
-        this.$auth.loginWithRedirect({
-          screen_hint: 'signup',
-        });
+        // this.$auth.loginWithRedirect({
+        //   screen_hint: 'signup',
+        // });
+        window.location.assign('/notFound');
       },
     },
     components: {

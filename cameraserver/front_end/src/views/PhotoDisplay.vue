@@ -33,8 +33,9 @@ export default {
     async getPhotos() {
       try {
         console.log("EMAI:L");
-        console.log(this.$auth.user.email );
-        let response = await axios.get("/api/photos", { params: { user: this.$auth.user.email } });
+        // console.log(this.$auth.user.email );
+        // let response = await axios.get("/api/photos", { params: { user: this.$auth.user.email } });
+        let response = await axios.get("/api/photos", { params: { user: "this.$auth.user.email" } });
         this.photos = response.data;
         return true;
       } catch (error) {

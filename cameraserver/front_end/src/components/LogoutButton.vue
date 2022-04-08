@@ -16,8 +16,8 @@ export default({
     methods: {
       logout() {
         console.log("Logging out")
-        this.$auth.logout();
-        this.$router.push({ path: '/' });
+        // this.$auth.logout();
+        // this.$router.push({ path: '/' });
       },
     },
 })

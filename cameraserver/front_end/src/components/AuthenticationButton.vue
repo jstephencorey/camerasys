@@ -1,5 +1,6 @@
 <template>
-    <logout-button v-if="$auth.isAuthenticated" label="Log Out" />
+    <!-- <logout-button v-if="$auth.isAuthenticated" label="Log Out" /> -->
+    <logout-button v-if="true" label="Log Out" />
     <login-button v-else label="Log In" />
 </template>
 
